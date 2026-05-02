@@ -71,7 +71,7 @@ export default function Resume() {
           <span className="flex items-center gap-1"><Mail className="w-4 h-4 text-indigo-600" /> {data.contact.email}</span>
           <span className="flex items-center gap-1"><Phone className="w-4 h-4 text-indigo-600" /> {data.contact.phone}</span>
           <span className="flex items-center gap-1"><Globe className="w-4 h-4 text-indigo-600" /> {data.contact.websiteUrl.replace("https://", "")}</span>
-          <span className="flex items-center gap-1"><Flag className="w-4 h-4 text-indigo-600" /> {data.contact.nationality}</span>
+          <span className="flex items-center gap-1 print:hidden"><Flag className="w-4 h-4 text-indigo-600" /> {data.contact.nationality}</span>
         </div>
       </div>
       
@@ -222,7 +222,7 @@ export default function Resume() {
                 </li>
                 <li className="flex items-center gap-2 text-sm text-slate-800">
                   <MessageSquare className="w-4 h-4 text-[#ff4500]" />
-                  <span className="font-medium">reddit.com/user/JGA-ENT</span>
+                  <span className="font-medium">reddit.com/user/jga-ent</span>
                 </li>
                 <li className="flex items-center gap-2 text-sm text-slate-800">
                   <Github className="w-4 h-4 text-slate-800" />

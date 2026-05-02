@@ -14,7 +14,7 @@ export const cvData = {
       websiteUrl: "https://jgarciaarteaga.netlify.app",
       linkedin: "linkedin.com/in/jgarciaarteaga",
       linkedinUrl: "https://www.linkedin.com/in/jgarciaarteaga",
-      redditUrl: "https://www.reddit.com/user/JGA-ENT",
+      redditUrl: "https://www.reddit.com/user/jga-ent",
       githubUrl: "https://github.com/jgarciaarteagamd"
     },
     licenses: [
@@ -167,7 +167,7 @@ export const cvData = {
       websiteUrl: "https://jgarciaarteaga.netlify.app",
       linkedin: "linkedin.com/in/jgarciaarteaga",
       linkedinUrl: "https://www.linkedin.com/in/jgarciaarteaga",
-      redditUrl: "https://www.reddit.com/user/JGA-ENT",
+      redditUrl: "https://www.reddit.com/user/jga-ent",
       githubUrl: "https://github.com/jgarciaarteagamd"
     },
     licenses: [

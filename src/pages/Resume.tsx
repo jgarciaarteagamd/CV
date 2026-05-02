@@ -7,9 +7,6 @@ import { Badge } from '../components/ui/badge';
 import { Card, CardContent } from '../components/ui/card';
 import { Separator } from '../components/ui/separator';
 
-import ubaLogo from '../UBA.png';
-import ucsgLogo from '../UCSG.png';
-
 const Logos: Record<string, React.FC<{ className?: string }>> = {
   microsoft: ({ className }) => (
     <svg viewBox="0 0 23 23" className={className}>
@@ -32,10 +29,10 @@ const Logos: Record<string, React.FC<{ className?: string }>> = {
     </svg>
   ),
   uba: ({ className }) => (
-    <img src={ubaLogo} alt="UBA Logo" className={`${className} object-contain`} />
+    <img src="/UBA.png" alt="UBA Logo" className={`${className} object-contain`} />
   ),
   ucsg: ({ className }) => (
-    <img src={ucsgLogo} alt="UCSG Logo" className={`${className} object-contain`} />
+    <img src="/UCSG.png" alt="UCSG Logo" className={`${className} object-contain`} />
   )
 };
 
@@ -54,7 +51,7 @@ export default function Resume() {
   }, [location]);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 print:max-w-none print:p-0 print:m-0">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 print:max-w-none print:p-0 print:m-0 print:bg-white">
       <div className="flex justify-end mb-4 print:hidden">
         <button 
           onClick={() => window.print()} 
@@ -70,10 +67,10 @@ export default function Resume() {
           {data.hero.name}
         </h1>
         <h2 className="text-lg text-slate-600 font-medium mb-4">{data.hero.title}</h2>
-        <div className="flex gap-6 text-sm text-slate-500 font-mono tracking-tight">
-          <span className="flex items-center gap-1"><Mail className="w-3 h-3" /> {data.contact.email}</span>
-          <span className="flex items-center gap-1"><Phone className="w-3 h-3" /> {data.contact.phone}</span>
-          <span className="flex items-center gap-1"><MapPin className="w-3 h-3" /> {data.contact.location}</span>
+        <div className="flex gap-6 text-sm text-slate-500 font-mono tracking-tight items-center justify-center">
+          <span className="flex items-center gap-1"><Mail className="w-4 h-4 text-indigo-600" /> {data.contact.email}</span>
+          <span className="flex items-center gap-1"><Phone className="w-4 h-4 text-indigo-600" /> {data.contact.phone}</span>
+          <span className="flex items-center gap-1"><Globe className="w-4 h-4 text-indigo-600" /> {data.contact.websiteUrl.replace("https://", "")}</span>
         </div>
       </div>
       
@@ -190,19 +187,40 @@ export default function Resume() {
             <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 print:mb-2 print:text-black">
               {t('Idiomas', 'Languages')}
             </h3>
-            <div className="space-y-4">
+            <div className="space-y-4 print:space-y-3">
               {data.languages.map((lang, index) => (
                 <div key={index}>
                   <div className="flex justify-between text-sm mb-1">
                     <span className="font-medium text-slate-800">{lang.name}</span>
                     <span className="text-slate-500">{lang.level}</span>
                   </div>
-                  <div className="w-full bg-slate-100 rounded-full h-1.5">
+                  <div className="w-full bg-slate-100 rounded-full h-1.5 print:bg-slate-200">
                     <div className="bg-indigo-500 h-1.5 rounded-full" style={{ width: `${lang.percentage}%` }}></div>
                   </div>
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Social Links for Print only */}
+          <div className="hidden print:block print:break-inside-avoid print:order-5 mt-6 border-t border-slate-100 pt-6">
+            <h3 className="text-xs font-bold text-black uppercase tracking-widest mb-3">
+              {t('Links Sociales', 'Social Links')}
+            </h3>
+            <ul className="space-y-2">
+              <li className="flex items-center gap-2 text-sm text-slate-800">
+                <Linkedin className="w-4 h-4 text-[#0077b5]" />
+                <span className="font-medium">linkedin.com/in/jgarciaarteaga</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm text-slate-800">
+                <MessageSquare className="w-4 h-4 text-[#ff4500]" />
+                <span className="font-medium">reddit.com/user/JGA-ENT</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm text-slate-800">
+                <Github className="w-4 h-4 text-slate-800" />
+                <span className="font-medium">github.com/jgarciaarteaga</span>
+              </li>
+            </ul>
           </div>
         </section>
       </div>
@@ -239,7 +257,7 @@ export default function Resume() {
           </section>
 
           {/* Educación Universitaria Section */}
-          <section className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 print:p-0 print:border-none print:shadow-none print:mb-8">
+          <section className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 print:p-0 print:border-none print:shadow-none print:mb-8 print:bg-white">
             <div className="flex justify-between items-center mb-6 print:mb-4">
               <h2 className="text-xl font-bold text-slate-800 print:text-2xl print:border-b print:border-slate-200 print:pb-2 print:w-full">
                 {t('Educación Universitaria', 'University Education')}
@@ -250,7 +268,7 @@ export default function Resume() {
               {data.universityEducation.map((edu, index) => {
                 const LogoComponent = edu.logo ? Logos[edu.logo as keyof typeof Logos] : null;
                 return (
-                  <div key={index} className="group relative overflow-hidden rounded-xl bg-slate-50 border border-slate-200 flex p-4 print:bg-transparent print:border-none print:p-0 print:break-inside-avoid">
+                  <div key={index} className="group relative overflow-hidden rounded-xl bg-slate-50 border border-slate-200 flex p-4 print:bg-white print:border-none print:p-0 print:break-inside-avoid">
                     {LogoComponent && <div className="mr-3 shrink-0"><LogoComponent className="w-10 h-10 mt-1" /></div>}
                     <div className="flex flex-col flex-grow">
                       <h4 className="font-bold text-sm text-slate-800 print:text-base">{edu.title}</h4>
@@ -266,7 +284,7 @@ export default function Resume() {
           </section>
 
           {/* Formación Becaria Hospitalaria Section */}
-          <section className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 print:p-0 print:border-none print:shadow-none print:mb-8">
+          <section className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 print:p-0 print:border-none print:shadow-none print:mb-8 print:bg-white">
             <div className="flex justify-between items-center mb-6 print:mb-4">
               <h2 className="text-xl font-bold text-slate-800 print:text-2xl print:border-b print:border-slate-200 print:pb-2 print:w-full">
                 {t('Formación Becaria Hospitalaria', 'Hospital Fellowship Training')}
@@ -275,7 +293,7 @@ export default function Resume() {
             
             <div className="space-y-6">
               {data.hospitalEducation.map((edu, index) => (
-                <div key={index} className="group relative overflow-hidden rounded-xl bg-slate-50 border border-slate-200 flex flex-col p-4 print:bg-transparent print:border-none print:border-b print:border-slate-100 print:rounded-none print:p-0 print:pb-4 print:break-inside-avoid last:print:border-0 last:print:pb-0">
+                <div key={index} className="group relative overflow-hidden rounded-xl bg-slate-50 border border-slate-200 flex flex-col p-4 print:bg-white print:border-none print:border-b print:border-slate-100 print:rounded-none print:p-0 print:pb-4 print:break-inside-avoid last:print:border-0 last:print:pb-0">
                   <h4 className="font-bold text-sm text-slate-800 print:text-base">{edu.title}</h4>
                   <p className="text-[10px] text-indigo-600 font-mono tracking-tighter uppercase mt-1 mb-2 print:text-slate-600 print:text-xs">{edu.location}</p>
                   <p className="text-xs text-slate-500 leading-relaxed flex-grow print:text-slate-800 print:text-sm">

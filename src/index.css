@@ -194,7 +194,15 @@
     }
   body {
     @apply bg-background text-foreground;
+  }
+  
+  @media print {
+    body {
+      background-color: white !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
     }
+  }
   html {
     @apply font-sans;
     }

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
 import { cvData, cvDataDL } from '../data';
-import { Mail, Phone, MapPin, Linkedin, Briefcase, GraduationCap, Github, MessageSquare, Globe, Flag } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Briefcase, GraduationCap, Github, MessageSquare, Globe, Flag, Brain } from 'lucide-react';
 import { Badge } from '../components/ui/badge';
 import { Card, CardContent } from '../components/ui/card';
 import { Separator } from '../components/ui/separator';
@@ -147,6 +147,12 @@ export default function Resume() {
                   GitHub
                 </a>
               </li>
+              <li className="flex items-center gap-3 text-sm text-slate-700">
+                <Brain className="w-5 h-5 text-teal-600 shrink-0" />
+                <a href={data.contact.openTrainUrl} target="_blank" rel="noopener noreferrer" className="hover:text-teal-700 font-medium transition-colors break-all">
+                  OpenTrain AI
+                </a>
+              </li>
               <li className="pt-2">
                 <Separator className="bg-slate-100" />
               </li>
@@ -249,6 +255,10 @@ export default function Resume() {
                 <li className="flex items-center gap-2 text-sm text-slate-800">
                   <Github className="w-4 h-4 text-slate-800" />
                   <span className="font-medium">github.com/jgarciaarteaga</span>
+                </li>
+                <li className="flex items-center gap-2 text-sm text-slate-800">
+                  <Brain className="w-4 h-4 text-teal-600" />
+                  <span className="font-medium">app.opentrain.ai/labeler-profile/juan-g-15</span>
                 </li>
               </ul>
             </div>

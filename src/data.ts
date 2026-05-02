@@ -15,7 +15,8 @@ export const cvData = {
       linkedin: "linkedin.com/in/jgarciaarteaga",
       linkedinUrl: "https://www.linkedin.com/in/jgarciaarteaga",
       redditUrl: "https://www.reddit.com/user/jga-ent",
-      githubUrl: "https://github.com/jgarciaarteagamd"
+      githubUrl: "https://github.com/jgarciaarteagamd",
+      openTrainUrl: "https://app.opentrain.ai/labeler-profile/juan-g-15"
     },
     licenses: [
       "Homologación de Título de Médico: Ministerio de Universidades, España (Mar 2023).",
@@ -168,7 +169,8 @@ export const cvData = {
       linkedin: "linkedin.com/in/jgarciaarteaga",
       linkedinUrl: "https://www.linkedin.com/in/jgarciaarteaga",
       redditUrl: "https://www.reddit.com/user/jga-ent",
-      githubUrl: "https://github.com/jgarciaarteagamd"
+      githubUrl: "https://github.com/jgarciaarteagamd",
+      openTrainUrl: "https://app.opentrain.ai/labeler-profile/juan-g-15"
     },
     licenses: [
       "General Medicine Homologation: Ministry of Universities, Spain (Mar 2023).",

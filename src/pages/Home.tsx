@@ -52,15 +52,15 @@ export default function Home() {
                 </div>
                 
                 <div className="flex flex-wrap items-center gap-3">
-                  <a href={data.contact.linkedinUrl} target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "outline", size: "sm", className: "rounded-full border-slate-700 bg-slate-800 text-slate-300 hover:bg-[#0077b5] hover:text-white transition-colors hover:border-[#0077b5]" })}>
+                  <a href={data.contact.linkedinUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center h-9 px-4 rounded-full border border-slate-700 bg-slate-800 text-sm font-medium text-slate-300 hover:bg-[#0077b5] hover:text-white transition-colors hover:border-[#0077b5] focus:ring-2 focus:ring-offset-2 focus:ring-slate-900 focus:outline-none">
                     <Linkedin className="w-4 h-4 mr-2" />
                     LinkedIn
                   </a>
-                  <a href={data.contact.redditUrl} target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "outline", size: "sm", className: "rounded-full border-slate-700 bg-slate-800 text-slate-300 hover:bg-[#ff4500] hover:text-white transition-colors hover:border-[#ff4500]" })}>
+                  <a href={data.contact.redditUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center h-9 px-4 rounded-full border border-slate-700 bg-slate-800 text-sm font-medium text-slate-300 hover:bg-[#ff4500] hover:text-white transition-colors hover:border-[#ff4500] focus:ring-2 focus:ring-offset-2 focus:ring-slate-900 focus:outline-none">
                     <MessageSquare className="w-4 h-4 mr-2" />
                     Reddit
                   </a>
-                  <a href={data.contact.githubUrl} target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "outline", size: "sm", className: "rounded-full border-slate-700 bg-slate-800 text-slate-300 hover:bg-white hover:text-black transition-colors hover:border-white" })}>
+                  <a href={data.contact.githubUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center h-9 px-4 rounded-full border border-slate-700 bg-slate-800 text-sm font-medium text-slate-300 hover:bg-white hover:text-black transition-colors hover:border-white focus:ring-2 focus:ring-offset-2 focus:ring-slate-900 focus:outline-none">
                     <Github className="w-4 h-4 mr-2" />
                     GitHub
                   </a>

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
 import { cvData } from '../data';
-import { Mail, Phone, MapPin, Linkedin, Briefcase, GraduationCap, Github, MessageSquare } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Briefcase, GraduationCap, Github, MessageSquare, Globe } from 'lucide-react';
 import { Badge } from '../components/ui/badge';
 import { Card, CardContent } from '../components/ui/card';
 import { Separator } from '../components/ui/separator';
@@ -101,21 +101,32 @@ export default function Resume() {
                 <MapPin className="w-5 h-5 text-indigo-500 shrink-0" />
                 <span>{data.contact.location}</span>
               </li>
+              <li className="flex items-start gap-3 text-sm text-slate-700">
+                <Globe className="w-5 h-5 text-indigo-500 shrink-0" />
+                <a href={data.contact.websiteUrl} target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors break-all">
+                  jgarciaarteaga.netlify.app
+                </a>
+              </li>
+              
+              <li className="pt-2">
+                <Separator className="bg-slate-100" />
+              </li>
+
               <li className="flex items-center gap-3 text-sm text-slate-700">
-                <Linkedin className="w-5 h-5 text-indigo-500 shrink-0" />
-                <a href={data.contact.linkedinUrl} target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors break-all">
+                <Linkedin className="w-5 h-5 text-[#0077b5] shrink-0" />
+                <a href={data.contact.linkedinUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#0077b5] font-medium transition-colors break-all">
                   LinkedIn
                 </a>
               </li>
               <li className="flex items-center gap-3 text-sm text-slate-700">
                 <MessageSquare className="w-5 h-5 text-[#ff4500] shrink-0" />
-                <a href={data.contact.redditUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#ff4500] transition-colors break-all">
+                <a href={data.contact.redditUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#ff4500] font-medium transition-colors break-all">
                   Reddit
                 </a>
               </li>
               <li className="flex items-center gap-3 text-sm text-slate-700">
                 <Github className="w-5 h-5 text-slate-800 shrink-0" />
-                <a href={data.contact.githubUrl} target="_blank" rel="noopener noreferrer" className="hover:text-slate-800 transition-colors break-all">
+                <a href={data.contact.githubUrl} target="_blank" rel="noopener noreferrer" className="hover:text-black font-medium transition-colors break-all">
                   GitHub
                 </a>
               </li>

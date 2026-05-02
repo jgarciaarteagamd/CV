@@ -1,7 +1,7 @@
 import { useLanguage } from '../LanguageContext';
 import { projectsData } from '../data';
-import { Card, CardContent } from '../components/ui/card';
-import { Badge } from '../components/ui/badge';
+import { Card, CardContent } from '../components/ui/Card';
+import { Badge } from '../components/ui/Badge';
 import { Bot, Code2, ArrowUpRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import audiometricImg from '../AudiometricReport.png';

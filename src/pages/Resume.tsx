@@ -3,9 +3,9 @@ import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
 import { cvData } from '../data';
 import { Mail, Phone, MapPin, Linkedin, Briefcase, GraduationCap, Github, MessageSquare } from 'lucide-react';
-import { Badge } from '../components/ui/badge';
-import { Card, CardContent } from '../components/ui/card';
-import { Separator } from '../components/ui/separator';
+import { Badge } from '../components/ui/Badge';
+import { Card, CardContent } from '../components/ui/Card';
+import { Separator } from '../components/ui/Separator';
 
 import ubaLogo from '../UBA.png';
 import ucsgLogo from '../UCSG.png';

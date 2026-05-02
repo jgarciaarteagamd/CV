@@ -16,14 +16,14 @@ export default function Home() {
       <section className="relative overflow-visible overflow-x-clip bg-slate-900 border-b border-slate-800">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 min-h-[85vh] items-center py-16">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 min-h-[85vh] items-center py-20 lg:py-24">
             
             {/* Left Column: Text Content */}
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="flex flex-col justify-center max-w-2xl lg:max-w-lg xl:max-w-2xl"
+              className="flex flex-col justify-center max-w-2xl lg:max-w-lg xl:max-w-2xl pt-10"
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 text-indigo-400 border border-slate-700 w-fit mb-6 text-xs font-semibold tracking-wide uppercase">
                 <Stethoscope className="w-4 h-4" />
@@ -41,13 +41,13 @@ export default function Home() {
               
               <div className="flex flex-col space-y-6">
                 <div className="flex flex-wrap items-center gap-4">
-                  <Link to="/contact" className={buttonVariants({ variant: "default", size: "lg", className: "bg-indigo-600 hover:bg-indigo-700 text-white rounded-full px-8 h-12 text-base" })}>
+                  <a href={`mailto:${data.contact.email}`} className={buttonVariants({ variant: "default", size: "lg", className: "bg-indigo-600 hover:bg-indigo-700 text-white rounded-full px-8 h-12 text-base" })}>
                     {t('Contactar Ahora', 'Contact Now')}
                     <Mail className="ml-2 w-4 h-4" />
-                  </Link>
+                  </a>
                   <Link to="/resume?print=true" className={buttonVariants({ variant: "outline", size: "lg", className: "rounded-full px-8 h-12 text-base border-slate-700 bg-transparent text-slate-300 hover:bg-slate-800 hover:text-white" })}>
                     <Download className="mr-2 w-4 h-4" />
-                    {t('Imprimir CV', 'Print CV')}
+                    {t('Imprimir Currículum', 'Print CV')}
                   </Link>
                 </div>
                 

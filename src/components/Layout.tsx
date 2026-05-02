@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 const navItems = [
   { path: '/', label: { es: 'Inicio', en: 'Home' } },
-  { path: '/resume', label: { es: 'CV', en: 'Resume' } },
+  { path: '/resume', label: { es: 'Currículum', en: 'Resume' } },
   { path: '/projects', label: { es: 'Proyectos', en: 'Projects' } },
   { path: '/contact', label: { es: 'Contacto', en: 'Contact' } },
 ];

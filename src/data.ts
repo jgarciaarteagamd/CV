@@ -7,7 +7,7 @@ export const cvData = {
         "Especialista médico con visión tecnológica y profunda experiencia multicultural en sistemas de salud de España, Argentina y Ecuador. Combino una extensa trayectoria en diagnóstico clínico, cirugía y atención hospitalaria con una sólida formación en Inteligencia Artificial Generativa y desarrollo de herramientas ofimáticas médicas. Orientado a colaborar con empresas líderes en IA (LLMs) para el entrenamiento de modelos médicos, validación clínica, estructuración de datos de salud y desarrollo de tecnologías diagnósticas avanzadas.",
     },
     contact: {
-      email: "drjuanpablogarcia@gmail.com",
+      email: "jgarciaarteaga.md@gmail.com",
       phone: "(+34) 644-917436",
       location: "Huelva, Andalucía, España",
       nationality: "Italiana",
@@ -29,7 +29,9 @@ export const cvData = {
       "Microsoft 365 Copilot",
       "Desarrollo de Software Médico",
       "Validación Clínica LLM",
-      "Prompt Engineering"
+      "Prompt Engineering",
+      "Medical Data Labeling",
+      "RLHF / SFT Annotation"
     ],
     experience: [
       {
@@ -183,7 +185,9 @@ export const cvData = {
       "Microsoft 365 Copilot",
       "Medical Software Development",
       "Clinical LLM Validation",
-      "Prompt Engineering"
+      "Prompt Engineering",
+      "Medical Data Labeling",
+      "RLHF & SFT Annotation"
     ],
     experience: [
       {
@@ -309,40 +313,6 @@ export const cvData = {
   }
 };
 
-export const cvDataDL = {
-  es: {
-    ...cvData.es,
-    hero: {
-      name: "Dr. Juan García Arteaga",
-      title: "Medical AI Data Labeler | Clínico Experto en Generative AI & RLHF",
-      description: "Especialista médico enfocado en el entrenamiento de Modelos de Lenguaje Grande (LLMs) sanitarios. Cuento con una sólida experiencia en validación clínica, estructuración de datos de salud a gran escala, y creación de outputs bajo metodologías RLHF (Reinforcement Learning from Human Feedback). Mi background clínico y quirúrgico me permite realizar Data Labeling médico y evaluar modelos con los más altos estándares de precisión, razonamiento diagnóstico y seguridad clínica."
-    },
-    skills: [
-      "Medical Data Labeling",
-      "RLHF / SFT Annotation",
-      "Validación Clínica de LLMs",
-      "Generative AI y Prompt Engineering",
-      "Estructuración de Datos de Salud",
-      "Diagnostic Reasoning"
-    ]
-  },
-  en: {
-    ...cvData.en,
-    hero: {
-      name: "Juan Garcia Arteaga, MD",
-      title: "Medical AI Data Labeler | Clinical Expert in Generative AI & RLHF",
-      description: "Medical specialist focused on training healthcare Large Language Models (LLMs). I possess a strong background in clinical validation, large-scale health data structuring, and response generation through RLHF (Reinforcement Learning from Human Feedback) methodologies. My clinical and surgical background allows me to perform precise Medical Data Labeling and evaluate models with the highest standards of diagnostic reasoning and clinical safety."
-    },
-    skills: [
-      "Medical Data Labeling",
-      "RLHF & SFT Annotation",
-      "LLM Clinical Validation",
-      "Generative AI & Prompt Engineering",
-      "Health Data Structuring",
-      "Diagnostic Reasoning"
-    ]
-  }
-};
 
 export const projectsData = [
   {

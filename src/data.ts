@@ -11,7 +11,9 @@ export const cvData = {
       phone: "(+34) 644-917436",
       location: "Huelva, Andalucía, España",
       linkedin: "linkedin.com/in/jgarciaarteaga",
-      linkedinUrl: "https://www.linkedin.com/in/jgarciaarteaga"
+      linkedinUrl: "https://www.linkedin.com/in/jgarciaarteaga",
+      redditUrl: "https://www.reddit.com/user/JGA-ENT",
+      githubUrl: "https://github.com/jgarciaarteagamd"
     },
     licenses: [
       "Homologación de Título de Médico: Ministerio de Universidades, España (Mar 2023).",
@@ -163,7 +165,9 @@ export const cvData = {
       phone: "(+34) 644-917436",
       location: "Huelva, Andalusia, Spain",
       linkedin: "linkedin.com/in/jgarciaarteaga",
-      linkedinUrl: "https://www.linkedin.com/in/jgarciaarteaga"
+      linkedinUrl: "https://www.linkedin.com/in/jgarciaarteaga",
+      redditUrl: "https://www.reddit.com/user/JGA-ENT",
+      githubUrl: "https://github.com/jgarciaarteagamd"
     },
     licenses: [
       "General Medicine Homologation: Ministry of Universities, Spain (Mar 2023).",

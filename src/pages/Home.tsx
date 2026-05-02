@@ -1,4 +1,4 @@
-import { ArrowRight, Stethoscope, Mail, Download } from 'lucide-react';
+import { ArrowRight, Stethoscope, Mail, Download, Linkedin, MessageSquare, Github } from 'lucide-react';
 import { Button, buttonVariants } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { useLanguage } from '../LanguageContext';
@@ -39,15 +39,32 @@ export default function Home() {
                 {data.hero.description}
               </p>
               
-              <div className="flex flex-wrap items-center gap-4">
-                <Link to="/contact" className={buttonVariants({ variant: "default", size: "lg", className: "bg-indigo-600 hover:bg-indigo-700 text-white rounded-full px-8 h-12 text-base" })}>
-                  {t('Contactar Ahora', 'Contact Now')}
-                  <Mail className="ml-2 w-4 h-4" />
-                </Link>
-                <Link to="/resume?print=true" className={buttonVariants({ variant: "outline", size: "lg", className: "rounded-full px-8 h-12 text-base border-slate-700 bg-transparent text-slate-300 hover:bg-slate-800 hover:text-white" })}>
-                  <Download className="mr-2 w-4 h-4" />
-                  {t('Imprimir CV', 'Print CV')}
-                </Link>
+              <div className="flex flex-col space-y-6">
+                <div className="flex flex-wrap items-center gap-4">
+                  <Link to="/contact" className={buttonVariants({ variant: "default", size: "lg", className: "bg-indigo-600 hover:bg-indigo-700 text-white rounded-full px-8 h-12 text-base" })}>
+                    {t('Contactar Ahora', 'Contact Now')}
+                    <Mail className="ml-2 w-4 h-4" />
+                  </Link>
+                  <Link to="/resume?print=true" className={buttonVariants({ variant: "outline", size: "lg", className: "rounded-full px-8 h-12 text-base border-slate-700 bg-transparent text-slate-300 hover:bg-slate-800 hover:text-white" })}>
+                    <Download className="mr-2 w-4 h-4" />
+                    {t('Imprimir CV', 'Print CV')}
+                  </Link>
+                </div>
+                
+                <div className="flex flex-wrap items-center gap-3">
+                  <a href={data.contact.linkedinUrl} target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "outline", size: "sm", className: "rounded-full border-slate-700 bg-slate-800 text-slate-300 hover:bg-[#0077b5] hover:text-white transition-colors hover:border-[#0077b5]" })}>
+                    <Linkedin className="w-4 h-4 mr-2" />
+                    LinkedIn
+                  </a>
+                  <a href={data.contact.redditUrl} target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "outline", size: "sm", className: "rounded-full border-slate-700 bg-slate-800 text-slate-300 hover:bg-[#ff4500] hover:text-white transition-colors hover:border-[#ff4500]" })}>
+                    <MessageSquare className="w-4 h-4 mr-2" />
+                    Reddit
+                  </a>
+                  <a href={data.contact.githubUrl} target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "outline", size: "sm", className: "rounded-full border-slate-700 bg-slate-800 text-slate-300 hover:bg-white hover:text-black transition-colors hover:border-white" })}>
+                    <Github className="w-4 h-4 mr-2" />
+                    GitHub
+                  </a>
+                </div>
               </div>
             </motion.div>
 

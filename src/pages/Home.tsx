@@ -1,6 +1,6 @@
 import { ArrowRight, Stethoscope, Mail, Download, Linkedin, MessageSquare, Github } from 'lucide-react';
-import { Button, buttonVariants } from '../components/ui/button';
-import { Card, CardContent } from '../components/ui/card';
+import { Button, buttonVariants } from '../components/ui/Button';
+import { Card, CardContent } from '../components/ui/Card';
 import { useLanguage } from '../LanguageContext';
 import { cvData } from '../data';
 import { Link } from 'react-router-dom';

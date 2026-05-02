@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useLocation, Link } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
-import { Button } from './ui/button';
+import { Button } from './ui/Button';
 import { Globe, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 

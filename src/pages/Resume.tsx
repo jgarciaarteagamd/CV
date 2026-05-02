@@ -132,25 +132,25 @@ export default function Resume() {
               <li className="flex items-center gap-3 text-sm text-slate-700">
                 <Linkedin className="w-5 h-5 text-[#0077b5] shrink-0" />
                 <a href={data.contact.linkedinUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#0077b5] font-medium transition-colors break-all">
-                  LinkedIn
+                  linkedin.com/in/jgarciaarteaga
                 </a>
               </li>
               <li className="flex items-center gap-3 text-sm text-slate-700">
                 <MessageSquare className="w-5 h-5 text-[#ff4500] shrink-0" />
                 <a href={data.contact.redditUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#ff4500] font-medium transition-colors break-all">
-                  Reddit
+                  reddit.com/user/jga-ent
                 </a>
               </li>
               <li className="flex items-center gap-3 text-sm text-slate-700">
                 <Github className="w-5 h-5 text-slate-800 shrink-0" />
                 <a href={data.contact.githubUrl} target="_blank" rel="noopener noreferrer" className="hover:text-black font-medium transition-colors break-all">
-                  GitHub
+                  github.com/jgarciaarteagamd
                 </a>
               </li>
               <li className="flex items-center gap-3 text-sm text-slate-700">
                 <Brain className="w-5 h-5 text-teal-600 shrink-0" />
                 <a href={data.contact.openTrainUrl} target="_blank" rel="noopener noreferrer" className="hover:text-teal-700 font-medium transition-colors break-all">
-                  OpenTrain AI
+                  app.opentrain.ai/labeler-profile/juan-g-15
                 </a>
               </li>
               <li className="pt-2">

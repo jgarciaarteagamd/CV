@@ -13,23 +13,23 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* Hero Section - SaaS Landing Style split layout */}
-      <section className="relative overflow-hidden bg-slate-900 border-b border-slate-800">
+      <section className="relative overflow-visible overflow-x-clip bg-slate-900 border-b border-slate-800">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 min-h-[85vh] lg:h-[85vh] items-center py-16">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 min-h-[85vh] items-center py-16">
             
             {/* Left Column: Text Content */}
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="flex flex-col justify-center max-w-2xl"
+              className="flex flex-col justify-center max-w-2xl lg:max-w-lg xl:max-w-2xl"
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 text-indigo-400 border border-slate-700 w-fit mb-6 text-xs font-semibold tracking-wide uppercase">
                 <Stethoscope className="w-4 h-4" />
                 <span>Health Tech & AI Innovator</span>
               </div>
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-[1.1]">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight pb-2">
                 {data.hero.name}
               </h1>
               <p className="text-indigo-400 font-medium tracking-wide uppercase text-sm mb-6">
@@ -82,7 +82,7 @@ export default function Home() {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-indigo-500/30 rounded-full blur-[80px]"></div>
 
                 {/* Card 1 */}
-                <Card className="absolute top-10 -left-12 w-64 bg-slate-800/80 backdrop-blur border-slate-700 shadow-2xl p-4 rotate-[-4deg] animate-[float_6s_ease-in-out_infinite]">
+                <Card className="absolute top-10 -left-6 lg:-left-2 xl:-left-12 w-64 bg-slate-800/80 backdrop-blur border-slate-700 shadow-2xl p-4 rotate-[-4deg] animate-[float_6s_ease-in-out_infinite]">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="w-8 h-8 rounded bg-indigo-500/20 flex items-center justify-center">
                       <span className="text-indigo-400 font-mono text-xs">AI</span>

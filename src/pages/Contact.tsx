@@ -1,9 +1,9 @@
 import { useLanguage } from '../LanguageContext';
-import { Card, CardContent } from '../components/ui/Card';
-import { Input } from '../components/ui/Input';
-import { Textarea } from '../components/ui/Textarea';
-import { Button } from '../components/ui/Button';
-import { Label } from '../components/ui/Label';
+import { Card, CardContent } from '../components/ui/card';
+import { Input } from '../components/ui/input';
+import { Textarea } from '../components/ui/textarea';
+import { Button } from '../components/ui/button';
+import { Label } from '../components/ui/label';
 import { Send, Mail, MapPin } from 'lucide-react';
 import { cvData } from '../data';
 

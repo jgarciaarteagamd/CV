@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
 import { cvData } from '../data';
-import { Mail, Phone, MapPin, Linkedin, Briefcase, GraduationCap, Github, MessageSquare, Globe } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Briefcase, GraduationCap, Github, MessageSquare, Globe, Flag } from 'lucide-react';
 import { Badge } from '../components/ui/badge';
 import { Card, CardContent } from '../components/ui/card';
 import { Separator } from '../components/ui/separator';
@@ -67,10 +67,11 @@ export default function Resume() {
           {data.hero.name}
         </h1>
         <h2 className="text-lg text-slate-600 font-medium mb-4">{data.hero.title}</h2>
-        <div className="flex gap-6 text-sm text-slate-500 font-mono tracking-tight items-center justify-center">
+        <div className="flex flex-wrap gap-6 text-sm text-slate-500 font-mono tracking-tight items-center justify-center">
           <span className="flex items-center gap-1"><Mail className="w-4 h-4 text-indigo-600" /> {data.contact.email}</span>
           <span className="flex items-center gap-1"><Phone className="w-4 h-4 text-indigo-600" /> {data.contact.phone}</span>
           <span className="flex items-center gap-1"><Globe className="w-4 h-4 text-indigo-600" /> {data.contact.websiteUrl.replace("https://", "")}</span>
+          <span className="flex items-center gap-1"><Flag className="w-4 h-4 text-indigo-600" /> {data.contact.nationality}</span>
         </div>
       </div>
       
@@ -98,17 +99,21 @@ export default function Resume() {
                 <MapPin className="w-5 h-5 text-indigo-500 shrink-0" />
                 <span>{data.contact.location}</span>
               </li>
-              <li className="flex items-start gap-3 text-sm text-slate-700">
-                <Globe className="w-5 h-5 text-indigo-500 shrink-0" />
-                <a href={data.contact.websiteUrl} target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors break-all">
-                  jgarciaarteaga.netlify.app
-                </a>
+              <li className="flex items-center gap-3 text-sm text-slate-700">
+                <Flag className="w-5 h-5 text-indigo-500 shrink-0" />
+                <span>{data.contact.nationality}</span>
               </li>
               
               <li className="pt-2">
                 <Separator className="bg-slate-100" />
               </li>
 
+              <li className="flex items-start gap-3 text-sm text-slate-700">
+                <Globe className="w-5 h-5 text-indigo-500 shrink-0" />
+                <a href={data.contact.websiteUrl} target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors break-all">
+                  jgarciaarteaga.netlify.app
+                </a>
+              </li>
               <li className="flex items-center gap-3 text-sm text-slate-700">
                 <Linkedin className="w-5 h-5 text-[#0077b5] shrink-0" />
                 <a href={data.contact.linkedinUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#0077b5] font-medium transition-colors break-all">
@@ -200,27 +205,31 @@ export default function Resume() {
                 </div>
               ))}
             </div>
-          </div>
 
-          {/* Social Links for Print only */}
-          <div className="hidden print:block print:break-inside-avoid print:order-5 mt-6 border-t border-slate-100 pt-6">
-            <h3 className="text-xs font-bold text-black uppercase tracking-widest mb-3">
-              {t('Links Sociales', 'Social Links')}
-            </h3>
-            <ul className="space-y-2">
-              <li className="flex items-center gap-2 text-sm text-slate-800">
-                <Linkedin className="w-4 h-4 text-[#0077b5]" />
-                <span className="font-medium">linkedin.com/in/jgarciaarteaga</span>
-              </li>
-              <li className="flex items-center gap-2 text-sm text-slate-800">
-                <MessageSquare className="w-4 h-4 text-[#ff4500]" />
-                <span className="font-medium">reddit.com/user/JGA-ENT</span>
-              </li>
-              <li className="flex items-center gap-2 text-sm text-slate-800">
-                <Github className="w-4 h-4 text-slate-800" />
-                <span className="font-medium">github.com/jgarciaarteaga</span>
-              </li>
-            </ul>
+            {/* Social Links for Print only - placed here to recover space below languages */}
+            <div className="hidden print:block mt-6 border-t border-slate-100 pt-6">
+              <h3 className="text-xs font-bold text-black uppercase tracking-widest mb-3">
+                {t('Links Sociales', 'Social Links')}
+              </h3>
+              <ul className="space-y-2">
+                <li className="flex items-center gap-2 text-sm text-slate-800">
+                  <Globe className="w-4 h-4 text-indigo-600" />
+                  <span className="font-medium">jgarciaarteaga.netlify.app</span>
+                </li>
+                <li className="flex items-center gap-2 text-sm text-slate-800">
+                  <Linkedin className="w-4 h-4 text-[#0077b5]" />
+                  <span className="font-medium">linkedin.com/in/jgarciaarteaga</span>
+                </li>
+                <li className="flex items-center gap-2 text-sm text-slate-800">
+                  <MessageSquare className="w-4 h-4 text-[#ff4500]" />
+                  <span className="font-medium">reddit.com/user/JGA-ENT</span>
+                </li>
+                <li className="flex items-center gap-2 text-sm text-slate-800">
+                  <Github className="w-4 h-4 text-slate-800" />
+                  <span className="font-medium">github.com/jgarciaarteaga</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
       </div>

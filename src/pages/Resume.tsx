@@ -1,11 +1,14 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
-import { cvData } from '../data';
+import { cvData, cvDataDL } from '../data';
 import { Mail, Phone, MapPin, Linkedin, Briefcase, GraduationCap, Github, MessageSquare, Globe, Flag } from 'lucide-react';
 import { Badge } from '../components/ui/badge';
 import { Card, CardContent } from '../components/ui/card';
 import { Separator } from '../components/ui/separator';
+
+import ubaLogo from '../assets/UBA.png';
+import ucsgLogo from '../assets/UCSG.png';
 
 const Logos: Record<string, React.FC<{ className?: string }>> = {
   microsoft: ({ className }) => (
@@ -29,16 +32,18 @@ const Logos: Record<string, React.FC<{ className?: string }>> = {
     </svg>
   ),
   uba: ({ className }) => (
-    <img src="/UBA.png" alt="UBA Logo" className={`${className} object-contain`} />
+    <img src={ubaLogo} alt="UBA Logo" className={`${className} object-contain`} />
   ),
   ucsg: ({ className }) => (
-    <img src="/UCSG.png" alt="UCSG Logo" className={`${className} object-contain`} />
+    <img src={ucsgLogo} alt="UCSG Logo" className={`${className} object-contain`} />
   )
 };
 
 export default function Resume() {
   const { language, t } = useLanguage();
-  const data = cvData[language];
+  const [resumeType, setResumeType] = React.useState<'general' | 'dl'>('general');
+  const actualCvData = resumeType === 'dl' ? cvDataDL : cvData;
+  const data = actualCvData[language as keyof typeof actualCvData] || actualCvData.en;
   const location = useLocation();
 
   useEffect(() => {
@@ -52,7 +57,21 @@ export default function Resume() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 print:max-w-none print:p-0 print:m-0 print:bg-white">
-      <div className="flex justify-end mb-4 print:hidden">
+      <div className="flex justify-between items-center mb-8 print:hidden">
+        <div className="flex gap-2">
+          <button
+            onClick={() => setResumeType('general')}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${resumeType === 'general' ? 'bg-indigo-100 text-indigo-700' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}
+          >
+            {t('General', 'General')}
+          </button>
+          <button
+            onClick={() => setResumeType('dl')}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${resumeType === 'dl' ? 'bg-indigo-100 text-indigo-700' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}
+          >
+            {t('Data Labeling', 'Data Labeling')}
+          </button>
+        </div>
         <button 
           onClick={() => window.print()} 
           className="inline-flex items-center justify-center whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-indigo-500 bg-indigo-600 hover:bg-indigo-700 text-white shadow-sm rounded-full px-6 h-10 text-sm"
@@ -99,10 +118,6 @@ export default function Resume() {
                 <MapPin className="w-5 h-5 text-indigo-500 shrink-0" />
                 <span>{data.contact.location}</span>
               </li>
-              <li className="flex items-center gap-3 text-sm text-slate-700">
-                <Flag className="w-5 h-5 text-indigo-500 shrink-0" />
-                <span>{data.contact.nationality}</span>
-              </li>
               
               <li className="pt-2">
                 <Separator className="bg-slate-100" />
@@ -131,6 +146,13 @@ export default function Resume() {
                 <a href={data.contact.githubUrl} target="_blank" rel="noopener noreferrer" className="hover:text-black font-medium transition-colors break-all">
                   GitHub
                 </a>
+              </li>
+              <li className="pt-2">
+                <Separator className="bg-slate-100" />
+              </li>
+              <li className="flex items-center gap-3 text-sm text-slate-700">
+                <Flag className="w-5 h-5 text-indigo-500 shrink-0" />
+                <span>{data.contact.nationality}</span>
               </li>
             </ul>
           </div>

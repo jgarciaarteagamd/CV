@@ -18,10 +18,7 @@ export const cvData = {
     licenses: [
       "Homologación de Título de Médico: Ministerio de Universidades, España (Mar 2023).",
       "Reconocimiento Especialidad ORL: Ministerio de Sanidad, España (Res. Sep 2025).",
-      "Colegiado N° 21/2105263: Ilustre Colegio Oficial de Médicos de Huelva (Alta: May 2023).",
-      "Certificado de Idoneidad Profesional: Apto por el CGCOM de España.",
-      "Registro SENESCYT (Ecuador): Médico (N° 1028-12-1132369) y Especialista en ORL (N° 0324214206).",
-      "Título de Especialista ORL (UBA): Reg. N° 1577, Folio 316, Libro 281 (Argentina)."
+      "Colegiado N° 21/2105263: Ilustre Colegio Oficial de Médicos de Huelva (Alta: May 2023)."
     ],
     skills: [
       "Generative AI en Medicina",
@@ -172,10 +169,7 @@ export const cvData = {
     licenses: [
       "General Medicine Homologation: Ministry of Universities, Spain (Mar 2023).",
       "ENT Specialty Recognition: Ministry of Health, Spain (Res. Sep 2025).",
-      "Medical Board Member No. 21/2105263: Huelva Official Medical College (Since May 2023).",
-      "Certificate of Good Standing: Approved by the CGCOM (Spain).",
-      "SENESCYT Registry (Ecuador): Physician (No. 1028-12-1132369) & ENT Specialist (No. 0324214206).",
-      "ENT Specialist Degree (UBA): Reg. No. 1577, Folio 316, Book 281 (Argentina)."
+      "Medical Board Member No. 21/2105263: Huelva Official Medical College (Since May 2023)."
     ],
     skills: [
       "Generative AI in Medicine",

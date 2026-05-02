@@ -125,7 +125,7 @@ export default function Resume() {
           <Separator className="print:hidden" />
 
           {/* Core Skills */}
-          <div className="print:break-inside-avoid">
+          <div className="print:break-inside-avoid print:order-1">
              <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 print:mb-2 print:text-black">
               {t('Tech & AI para Medicina', 'Tech & AI for Healthcare')}
             </h3>
@@ -141,7 +141,7 @@ export default function Resume() {
           <Separator className="print:hidden" />
 
           {/* Courses */}
-          <div className="print:break-inside-avoid">
+          <div className="print:break-inside-avoid print:order-3">
             <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 print:mb-2 print:text-black">
               {t('Cursos', 'Courses')}
             </h3>
@@ -158,7 +158,7 @@ export default function Resume() {
           <Separator className="print:hidden" />
 
           {/* Licenses */}
-          <div className="print:break-inside-avoid">
+          <div className="print:break-inside-avoid print:order-2">
             <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 print:mb-2 print:text-black">
               {t('Licencias y Registros', 'Licenses & Registrations')}
             </h3>
@@ -175,7 +175,7 @@ export default function Resume() {
           <Separator className="print:hidden" />
 
           {/* Languages */}
-          <div className="print:break-inside-avoid">
+          <div className="print:break-inside-avoid print:order-4">
             <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 print:mb-2 print:text-black">
               {t('Idiomas', 'Languages')}
             </h3>
